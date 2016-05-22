@@ -16,7 +16,7 @@
 
 ## 使用
 ```
-app.engine('html', template({
+app.engine('html', template.express({
     compress: true,
     debug: false
 }));
