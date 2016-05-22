@@ -74,7 +74,7 @@ ExpressTemplate.express = function (options) {
      * @param data.cache=false {Boolean} 是否缓存模板
      * @param data._locals=null {Object} 动态助手
      * @param data.settings=nul {Object} app 配置
-     * @param [callback] {Function} 回调
+     * @param callback {Function} 回调
      */
     return function (file, data, callback) {
         // this:
@@ -92,14 +92,13 @@ ExpressTemplate.express = function (options) {
         if (!tpl) {
             try {
                 var template = fileCahe[file] || fs.readFileSync(file, 'utf8');
-            } catch (err) {
+            }
+            catch (err) {
+                /* istanbul ignore next */
                 var err2 = new Error('template read file:\n' + this.path + '\n' + err.message)
 
-                if (callback) {
-                    return callback(err2);
-                } else {
-                    throw err2;
-                }
+                /* istanbul ignore next */
+                return callback(err2);
             }
 
             if (data.cache) {
@@ -113,11 +112,7 @@ ExpressTemplate.express = function (options) {
             tplCahe[file] = tpl;
         }
 
-        if (callback) {
-            callback(null, tpl.render(data));
-        } else {
-            return tpl.render(data);
-        }
+        callback(null, tpl.render(data));
     };
 };
 ExpressTemplate.defaults = defaults;
