@@ -13,3 +13,12 @@
 [coveralls-img]: https://img.shields.io/coveralls/blearjs/blear.node.template/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/blearjs/blear.node.template?branch=master
 
+
+## 使用
+```
+app.engine('html', template({
+    compress: true,
+    debug: false
+}));
+app.set('view engine', 'html');
+```
