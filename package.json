@@ -1,6 +1,6 @@
 {
   "name": "blear.node.template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "指令型模板引擎",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
@@ -40,7 +40,7 @@
   "dependencies": {
     "blear.classes.class": "^1.0.6",
     "blear.classes.events": "^1.0.4",
-    "blear.classes.template": "^1.0.6",
+    "blear.classes.template": "^1.0.11",
     "blear.polyfills.array": "^1.0.3",
     "blear.polyfills.date": "^1.0.1",
     "blear.polyfills.function": "^1.0.1",
@@ -56,7 +56,6 @@
     "blear.utils.function": "^1.0.1",
     "blear.utils.json": "^1.0.1",
     "blear.utils.number": "^1.0.1",
-    "blear.utils.object": "^1.0.2",
     "blear.utils.random": "^1.0.1",
     "blear.utils.string": "^1.0.3",
     "blear.utils.time": "^1.0.1",

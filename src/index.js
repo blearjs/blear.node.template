@@ -3,7 +3,6 @@
 var path = require('path');
 var fs = require('fs');
 var Template = require('blear.classes.template');
-var object = require('blear.utils.object');
 
 var tplCahe = {};
 var fileCahe = {};
@@ -95,7 +94,7 @@ ExpressTemplate.express = function (options) {
             }
             catch (err) {
                 /* istanbul ignore next */
-                var err2 = new Error('template read file:\n' + this.path + '\n' + err.message)
+                var err2 = new Error('模板文件读取失败\n' + this.path + '\n' + err.message);
 
                 /* istanbul ignore next */
                 return callback(err2);

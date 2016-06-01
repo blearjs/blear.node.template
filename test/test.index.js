@@ -143,5 +143,29 @@ describe('测试文件', function () {
                 done();
             });
     });
+    
+    it('.locals', function (done) {
+        var app = express();
+
+        app.engine('html', Template.express());
+        app.set('views', path.join(__dirname, './locals/'));
+        app.set('view engine', 'html');
+
+        app.get('/', function (req, res, next) {
+            res.locals.$a = '1';
+            res.render('index.html');
+        });
+
+        request(app)
+            .get('/')
+            .expect('content-type', /html/)
+            .expect(200)
+            .end(function (err, res) {
+                if (err) throw err;
+
+                expect(res.text).to.equal('1');
+                done();
+            });
+    });
 });
 
