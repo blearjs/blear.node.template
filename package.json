@@ -40,7 +40,7 @@
   "dependencies": {
     "blear.classes.class": "^1.0.6",
     "blear.classes.events": "^1.0.4",
-    "blear.classes.template": "^1.0.11",
+    "blear.classes.template": "^1.0.20",
     "blear.polyfills.array": "^1.0.3",
     "blear.polyfills.date": "^1.0.1",
     "blear.polyfills.function": "^1.0.1",

@@ -70,6 +70,8 @@ app.set('view engine', 'html');
 ### 判断
 ```
 <li @if="exp"></li>
+<li @else-if="exp"></li>
+<li @else></li>
 ```
 
 ### 属性
