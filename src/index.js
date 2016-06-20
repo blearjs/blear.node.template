@@ -46,6 +46,12 @@ var defaults = {
     compress: true,
 
     /**
+     * 是否保留注释
+     * @type Boolean
+     */
+    comment: true,
+
+    /**
      * 是否为调试模式
      * @type Boolean
      */
