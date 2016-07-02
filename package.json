@@ -57,7 +57,7 @@
     "blear.utils.number": "^1.0.1",
     "blear.utils.object": "^1.0.2",
     "blear.utils.random": "^1.0.1",
-    "blear.utils.string": "^1.0.3",
+    "blear.utils.string": "^1.0.5",
     "blear.utils.time": "^1.0.1",
     "blear.utils.typeis": "^1.0.2"
   },
