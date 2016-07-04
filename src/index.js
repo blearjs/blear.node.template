@@ -121,6 +121,8 @@ ExpressTemplate.express = function (options) {
     };
 };
 ExpressTemplate.defaults = defaults;
-
+ExpressTemplate.method = function () {
+    return Template.method.apply(Template, arguments);
+};
 
 module.exports = ExpressTemplate;
