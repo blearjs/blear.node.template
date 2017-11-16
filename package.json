@@ -1,6 +1,6 @@
 {
   "name": "blear.node.template",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "指令型模板引擎",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
@@ -40,7 +40,7 @@
   "dependencies": {
     "blear.classes.class": "^1.1.6",
     "blear.classes.events": "^1.0.7",
-    "blear.classes.template": "^1.1.0",
+    "blear.classes.template": "^1.1.1",
     "blear.utils.access": "1.x",
     "blear.utils.array": "1.x",
     "blear.utils.collection": "1.x",
