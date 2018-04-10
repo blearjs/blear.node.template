@@ -10,6 +10,7 @@
 
 var art = require('art-template');
 var object = require('blear.utils.object');
+var path = require('blear.node.path');
 
 var defaults = {
     // 控制输出是否被转义
@@ -18,6 +19,7 @@ var defaults = {
     debug: true
 };
 var artDefaults = art.defaults;
+var absolutedRE = /^\//;
 
 artDefaults.rules.unshift({
     test: /{{=\s*?([\s\S]*?)\s*?}}/,
@@ -38,6 +40,23 @@ artDefaults.rules.unshift({
         }
     }
 });
+
+artDefaults.resolveFilename = function (filename, options) {
+    var from = options.filename;
+
+    if (filename === from) {
+        return from;
+    }
+
+    var base = absolutedRE.test(filename) ? options.root : path.dirname(from);
+    var file = path.join(base, filename);
+
+    if (path.extname(file) !== options.extname) {
+        file += options.extname;
+    }
+
+    return file;
+};
 
 module.exports = art;
 
