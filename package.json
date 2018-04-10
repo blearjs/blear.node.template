@@ -1,7 +1,7 @@
 {
   "name": "blear.node.template",
-  "version": "1.0.20",
-  "description": "指令型模板引擎",
+  "version": "2.0.0",
+  "description": "模板引擎，基于 art-template@4.12.2",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
     "test-travis": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly",
@@ -38,7 +38,7 @@
     "url": "https://github.com/blearjs/blear.node.template/issues"
   },
   "dependencies": {
-    "art-template": "^4.12.2",
+    "art-template": "4.12.2",
     "blear.utils.object": "^1.0.14"
   },
   "peerDependencies": {},
