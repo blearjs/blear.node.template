@@ -1,5 +1,5 @@
 /**
- * 文件描述
+ * node 模板引擎
  * @author ydr.me
  * @create 2018-02-07 10:43
  * @update 2018-02-07 10:43
@@ -17,10 +17,40 @@ var defaults = {
     // 是否调试模式
     debug: true
 };
+var artDefaults = art.defaults;
+
+artDefaults.rules.unshift({
+    test: /{{=\s*?([\s\S]*?)\s*?}}/,
+    use: function (match, code) {
+        return {
+            output: 'raw',
+            code: JSON.stringify('{{' + code + '}}')
+        }
+    }
+});
+
+artDefaults.rules.unshift({
+    test: /{{\s*?raw\s*?}}([\s\S]*?){{\s*?\/raw\s*?}}/,
+    use: function (match, code) {
+        return {
+            output: 'raw',
+            code: JSON.stringify(code)
+        }
+    }
+});
 
 module.exports = art;
 
 module.exports.defaults = defaults;
+
+/**
+ * 添加过滤器
+ * @param name
+ * @param filter
+ */
+module.exports.filter = function (name, filter) {
+    artDefaults.imports[name] = filter;
+};
 
 /**
  * 适配 express

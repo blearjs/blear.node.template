@@ -45,8 +45,10 @@
   "devDependencies": {
     "blear.utils.plan": "^2.2.1",
     "chai-jasmine": "1.0.7",
+    "express": "^4.16.3",
     "istanbul": "0.4.5",
-    "mocha": "4.0.1"
+    "mocha": "4.0.1",
+    "supertest": "^3.0.0"
   },
   "license": "MIT"
 }
