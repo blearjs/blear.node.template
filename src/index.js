@@ -8,7 +8,7 @@
 
 'use strict';
 
-var Template = require('/Users/cloudcome/development/github-blearjs/blear.classes.template/src/index');
+var Template = require('blear.classes.template');
 var object = require('blear.utils.object');
 var fs = require('fs');
 
