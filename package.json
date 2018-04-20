@@ -1,7 +1,7 @@
 {
   "name": "blear.node.template",
-  "version": "2.0.1",
-  "description": "模板引擎，基于 art-template@4.12.2",
+  "version": "2.1.0",
+  "description": "字符串型模板引擎",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
     "test-travis": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly",
