@@ -7,7 +7,7 @@
 
 'use strict';
 
-var template = require('../src/index.js');
+var template = require('../src/index.js-old2');
 var path = require('path');
 var request = require('supertest');
 var expect = require('chai-jasmine').expect;
