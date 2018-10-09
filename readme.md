@@ -1,4 +1,4 @@
-# blear.node.template 字符串编译型模板引擎
+# blear.node.template 字符串编译型模板引擎（node 端）
 
 <https://blear.ydr.me/node/template>
 
