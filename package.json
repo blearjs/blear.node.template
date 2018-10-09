@@ -38,7 +38,7 @@
     "url": "https://github.com/blearjs/blear.node.template/issues"
   },
   "dependencies": {
-    "blear.classes.template": "^2.1.1",
+    "blear.classes.template": "^2.1.2",
     "blear.utils.object": "^1.0.14"
   },
   "peerDependencies": {},
