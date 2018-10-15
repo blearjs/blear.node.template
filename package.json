@@ -1,6 +1,6 @@
 {
   "name": "blear.node.template",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "字符串编译型模板引擎（node 端）",
   "scripts": {
     "live": "browser-sync start --config bs-config.js",
