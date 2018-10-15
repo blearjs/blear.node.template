@@ -10,6 +10,7 @@
 
 var Template = require('blear.classes.template');
 var object = require('blear.utils.object');
+var path = require('blear.node.path');
 var fs = require('fs');
 
 var defaults = {
@@ -31,6 +32,8 @@ exports.express = function (options) {
     var caches = options.cache ? Object.create(null) : null;
 
     return function (file, data, callback) {
+        // win 下的路径是反斜杆
+        file = path.normalize(file);
         // this:
         //{
         //    defaultEngine: 'html',
